@@ -1,162 +1,112 @@
-* {
+
+:root{
+ --black:#1A1A1D;
+ --lightblack:#3B1C32;
+ --purlle:#6A1E55;
+ --lightpurple:#A64D79;
+}
+
+
+
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root{
---black: #1A1A1D;
---purple:#6A1E55;
---lightBlack :#3B1C32;
---lightPurple:#6A1E55;
-}
-
-body {
-  background-image: url(./img/school-supplies-3033204_1280.jpg);
-  background-position: center;
-  background: cover ;
-  height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
+  color: var(--lightblack);
   
 }
 
-/* Header part */
+*::selection{
 
-header {
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  background-color: white;
-  border-radius: 40px;
-  margin-top: 20px;
-  margin-left: 40px;
-  padding-right: 140px;
-  position: fixed;
- 
+  background: var(--purlle);
+  color: white;
 }
 
-header i{
+html{
+  font-size: 100.5%;
+  overflow-x: hidden;
+}
+
+body{
+background-color: grey;
+display: flex;
+
+}
+
+header{
+  width: 96%;
+  background-color: white;
+  position: fixed;
+  top: 2rem;left:50%;
+  transform: translateX(-50%);
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+.Logo{
+ font-size: 27px;
+}
+
+header .navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+
+}
+
+header  .navbar ul li{
+  margin:0 1rem;
+}
+
+header  .navbar ul li a{
+  font-size: 19px;
+  color: var(--purlle);
+  transition: 0.2s;
+}
+
+header .navbar ul li a:hover{
+  font-size: 20px;
+  color: var(--black);
+}
+
+header .fa-bars{
   font-size: 1.5rem;
-  margin-left: 2rem;
-  color:var(--lightBlack);
-  padding: 10px;
+  display: none;
   cursor: pointer;
 }
 
-header h3{
- margin-right: 50%;
- color: var(--lightBlack);
-}
-
-header:hover{
-  color: var(--lightBlack);
-}
-
-.navbar{
-list-style: none;
- 
-}
-.navbar ul{
-    list-style: none;
-    display: flex;
+@media (max-width:872px){
    
-
-    
-}
-
-.navbar i {
-    font-size: 2rem;
-    
-
-}
-
-.navbar ul{
-  margin-left: 30px;
-}
-.navbar ul li{
- 
-}
-
-.navbar ul li a {
-  list-style: none;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  
-  
-}
-
-.navbar ul li  :hover{
-  color:var(--purple);
-}
-
-.navbar ul li  :active{
-  color: var(--lightPurple);
-}
-
-/* Side Nav Bar */
-
-.side-navbar i{
-  color: var(--Black);
-  display: none;
-}
-
-.side-navbar :hover{
- color: var(--purple);
-}
-/* Responsive */
-@media (max-width:768px){
-
-  body{
-    width: 55%;
+  html{
+    font-size: 39%;
   }
 
-  header{
-    font-size: 1rem;
-    display: flex;
-    justify-content: space-between;
+  header .fa-bars{
+    display: block;
+    font-size: 3.5rem;
   }
 
   header .navbar{
     position: fixed;
-    top: 5.7rem; left: 0;
-    width: 80%;
+    top: 9.5rem; left: 0;
+    width: 100%;
     background-color: white;
-    border-radius: 10px;
-    margin-left: 80px;
-    display: none;
-    
-
+    border-radius: 1rem;
   }
 
   header .navbar ul{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
+    flex-flow: column;
+    padding: 1rem 0;
   }
-
-  header .navbar ul li{
-    padding: 10px;
-  }
-
-  .side-navbar i{
-    display: block;
-  }
-
-  .menu-bar{
-    list-style: none;
-    text-decoration: none;
-    color: black
-  }
-
-  .menu-bar-li{
-    text-decoration: none;
-  }
-  
-
 }
