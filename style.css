@@ -95,18 +95,44 @@ header .fa-bars{
   header .fa-bars{
     display: block;
     font-size: 3.5rem;
+    transition: 0.2s;
   }
 
   header .navbar{
     position: fixed;
-    top: 9.5rem; left: 0;
+    top: -100rem; left: 0;
     width: 100%;
     background-color: white;
     border-radius: 1rem;
+    opacity: 0;
   }
 
   header .navbar ul{
     flex-flow: column;
     padding: 1rem 0;
+  }
+
+  header .navbar ul li{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  header .navbar ul li a{
+    font-size: 3rem;
+    display: block;
+  }
+
+  header .fa-xmark{
+    transform: rotate(90deg);
+    color: var(--purlle);
+    transition: 0.2s;
+  }
+
+  header .nov-toggle{
+    margin-top: 20px;
+    top: 6.7rem;
+    opacity: 1;
   }
 }

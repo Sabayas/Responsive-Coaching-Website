@@ -1,7 +1,11 @@
-const sideIcon = document.getElementById("side-icon");
-const menuBar = document.querySelector('.navbar');
+$(document).ready(function(){
 
-sideIcon.addEventListener("click", function(){
-     menuBar.classList.toggle("navbar")
    
-})
+
+    $('.fa-bars').click(function(){
+        $(this).toggleClass('fa-xmark')
+        $('.navbar').toggleClass('nov-toggle');
+
+    });
+    
+});
