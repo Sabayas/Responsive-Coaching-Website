@@ -26,6 +26,7 @@
   color: white;
 }
 
+
 html{
   font-size: 100.5%;
   overflow-x: hidden;
@@ -33,7 +34,7 @@ html{
 
 body{
 background-color: grey;
-display: flex;
+
 
 }
 
@@ -55,6 +56,7 @@ header{
 
 .Logo{
  font-size: 27px;
+
 }
 
 header .navbar ul{
@@ -105,6 +107,7 @@ header .fa-bars{
     background-color: white;
     border-radius: 1rem;
     opacity: 0;
+    transition: 0.5s linear;
   }
 
   header .navbar ul{
@@ -135,4 +138,122 @@ header .fa-bars{
     top: 6.7rem;
     opacity: 1;
   }
+}
+
+/* Home section starts */
+
+.home{
+  min-height: 100vh;
+  background-image: linear-gradient(red,yellow);
+  background: url(/img/school-supplies-3033204_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+.home .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding-top: 15rem;
+  padding-bottom: 8rem;
+  
+}
+
+.home .content h1{
+  padding: 1rem;
+  background-color: #3B1C32;
+  color: white;
+  border-radius: 30px;
+}
+
+.home .content p{
+  width: 50%;
+  margin: 2rem;
+  background-color: white;
+  border-radius: 40px;
+  text-align: center;
+
+}
+
+.home .content .btn{
+  border: none;
+  padding: 1rem;
+  background-color: var(--purlle);
+  color: white;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow:0 20px 65px rgba(87, 11, 16, 0.8);;
+}
+
+.home::before{
+  content: '';
+  position: absolute;
+  bottom: -25rem;
+  left: 50%;
+  transform: translate(-50%);
+  border-top:  70vh solid white;
+  width: 120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.box-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 70%;
+  width: 90%;
+  margin-left: 4rem;
+  padding-bottom: 3rem;
+  z-index: 1;
+  
+}
+
+.box-section .box{
+
+  background-color: white;
+  border-radius: 1rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column;
+  box-shadow:0 20px 65px rgba(87, 11, 16, 0.3);
+  
+}
+
+
+
+
+.box-section .box i{
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.box-section .box i:hover{
+  color: #b93393;
+}
+
+.box-section .box p{
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width:872){
+
+  .box-section .box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
 }

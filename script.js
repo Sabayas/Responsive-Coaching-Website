@@ -7,5 +7,7 @@ $(document).ready(function(){
         $('.navbar').toggleClass('nov-toggle');
 
     });
+
+   
     
 });
