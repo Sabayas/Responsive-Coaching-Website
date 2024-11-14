@@ -17,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--lightblack);
+
   
 }
 
@@ -33,11 +34,43 @@ html{
 }
 
 body{
-background-color: grey;
+  background: linear-gradient(#6a1e5569, #a64d7a3a),url(/img/school-supplies-3033204_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  
 
 
 }
 
+.heading{
+  color: var(--lightblack);
+  text-align: center;
+  background-color: aliceblue;
+  font-size: 2rem;
+  border-radius: 30px;
+}
+
+.title{
+  color: var(--purlle);
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 3rem;
+
+}
+.btn{
+  border: none;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--purlle);
+  color: white;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow:0 20px 65px rgba(87, 11, 16, 0.8);
+}
 header{
   width: 96%;
   background-color: white;
@@ -91,13 +124,17 @@ header .fa-bars{
 @media (max-width:872px){
    
   html{
-    font-size: 39%;
+    font-size: 29%;
   }
 
   header .fa-bars{
     display: block;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     transition: 0.2s;
+  }
+
+  .Logo a{
+    font-size: 0.3rem;
   }
 
   header .navbar{
@@ -143,24 +180,23 @@ header .fa-bars{
 /* Home section starts */
 
 .home{
-  min-height: 100vh;
-  background-image: linear-gradient(red,yellow);
-  background: url(/img/school-supplies-3033204_1280.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
+  min-height: 90vh;
+ 
+ 
+  
   overflow: hidden;
 }
 
 
 .home .content{
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   padding-top: 15rem;
   padding-bottom: 8rem;
+  
   
 }
 
@@ -183,6 +219,7 @@ header .fa-bars{
 .home .content .btn{
   border: none;
   padding: 1rem;
+  margin-bottom: 2rem;
   background-color: var(--purlle);
   color: white;
   font-size: 1rem;
@@ -194,25 +231,33 @@ header .fa-bars{
 .home::before{
   content: '';
   position: absolute;
-  bottom: -25rem;
+  bottom: -29rem;
   left: 50%;
   transform: translate(-50%);
-  border-top:  70vh solid white;
-  width: 120%;
-  border-radius: 50%;
-  z-index: -1;
+border-top: 70vh white solid;
+width: 120%;
+border-radius: 50%;
+z-index: -1;
 }
 
 .box-section{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 30%;
+  transform: translateX(-30%);
   height: 70%;
   width: 90%;
-  margin-left: 4rem;
-  padding-bottom: 3rem;
+  gap: 1rem;
   z-index: 1;
+  position: relative;
+  padding-bottom: 10px;
+
+  
+
+ 
+  
   
 }
 
@@ -226,7 +271,10 @@ header .fa-bars{
   justify-content: space-evenly;
   align-items: center;
   flex-flow: column;
-  box-shadow:0 20px 65px rgba(87, 11, 16, 0.3);
+  box-shadow:  0 20px 65px rgba(87, 11, 16, 0.5);
+  
+  
+
   
 }
 
@@ -248,12 +296,131 @@ header .fa-bars{
   padding: 1rem;
 }
 
-@media (max-width:872){
+@media (max-width:872px){
 
-  .box-section .box{
+
+  html{
+    font-size: 70%;
+  }
+  .home::before{
+  display: none;
+  }
+  
+
+ 
+  .home .content{
+    height: 100vh;
+    z-index: -2;
+   
+  }
+
+  .home .content h1{
+    font-size: 2.5rem;
+  }
+
+  .home .content p{
+    font-size: 1.7rem;
+  }
+
+  .home .content .btn{
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+  }
+
+
+  .box-section {
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
+  .box-section .box{
+  
+   width: 90%;
+   
+  }
+  
+
+  .box-section .box i{
+    font-size: 3rem;
+  }
+
+  .box-section .box h2{
+    font-size: 2rem;
+  }
+
+  .box-section .box i:hover{
+   color: #b93393;
+  }
+
+  .box-section .box p{
+    font-size: 1.6rem;
+  }
+
+}
+
+/* About us  */
+
+.about{
+  margin-top: 13rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-flow: column;
+}
+
+.about-content{
+ height: 100%;
+ width: 100%;
+}
+.image{
+  height: 100%;
+  width: 70%;
+  margin-left: 2rem;
+}
+
+.row img{
+  height: 40%;
+  
+  width: 20%;
+  margin-left: 260px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.row{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.row-content{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-left: 130px;
+}
+
+.row-content h3{
+  margin: 2rem;
+}
+
+.row-content .btn{
+  margin:  2rem;
+}
+
+@media (max-width:872px){
+
+  .row-content{
+    margin-right: 90px;
+  }
+  .row{
+    flex-flow: column;
+  }
 }
